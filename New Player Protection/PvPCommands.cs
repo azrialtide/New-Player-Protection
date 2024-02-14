@@ -29,17 +29,10 @@ namespace NewPlayerProtection
         public void Time()
         {
             NewPlayerProtection.Plugin.idTimeMap.TryGetValue(Context.Player.SteamUserId.ToString(),out var joinTime);
-            Log.Info("Read Data: " + joinTime);
             long.TryParse(joinTime, out long joinTimeNum);
             long timeTillEnd = joinTimeNum + 604800;
-            Log.Info("Read Data: " + timeTillEnd);
             DateTimeOffset dateTimeOffset = DateTimeOffset.FromUnixTimeSeconds(timeTillEnd);
-
-
-            Log.Info("NOW: "+DateTime.Now);
-            Log.Info("Future: " + dateTimeOffset);
             var tleft = DateTime.UtcNow - dateTimeOffset;
-            Log.Info("TimeLeft: " + tleft);
             TimeSpan timeLeft = dateTimeOffset - DateTime.UtcNow;
 
             

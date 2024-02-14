@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NewPlayerProtection")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2455c85d53c9c2a33a642e349983a4a49bbb4780")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10dda7e54f98f7ad1e17857aff968d477743bcef")]
 [assembly: System.Reflection.AssemblyProductAttribute("NewPlayerProtection")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NewPlayerProtection")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

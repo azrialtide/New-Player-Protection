@@ -63,14 +63,6 @@ public class Plugin : TorchPluginBase, IWpfPlugin
 
         XElement NPPTime = XElement.Load(NPPTimeFile);
 
-        var IDs = from item in NPPTime.Descendants("player")
-                  select ((string)item.Attribute("ID"));
-        foreach (var data in IDs)
-        {
-            //idTimeMap.Add(data[0, 1], data);
-
-        }
-
         IEnumerable<XElement> address =
             from el in NPPTime.Elements("player")
             select el;
@@ -78,7 +70,6 @@ public class Plugin : TorchPluginBase, IWpfPlugin
         {
             var ID = el.Attribute("ID").ToString().Replace("ID=\"", "").Replace("\"", "");
             var Timestamp = el.Element("Timestamp").ToString().Replace("<Timestamp>", "").Replace("</Timestamp>", "");
-            Log.Info(ID + " / " + Timestamp);
             idTimeMap.Add(ID, Timestamp);
         }
     }
@@ -100,9 +91,6 @@ public class Plugin : TorchPluginBase, IWpfPlugin
             case TorchSessionState.Unloading:
                 break;
         }
-    }
-    private void checkSZ() { 
-    
     }
     public UserControl GetControl() => new PropertyGrid
     {
