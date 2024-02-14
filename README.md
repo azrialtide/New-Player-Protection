@@ -11,4 +11,5 @@ What it does:
 
 Commands:
 !protection time - This shows the time left until they can no longer use safezones
-!protection disable - this sets the timestamp to 0 disabling the use of the safezone (For the people that dont want to be tempted) REQUIRES confirmation
+
+!protection disable - Sets the timestamp to 0 disabling the use of the safezone REQUIRES confirmation
