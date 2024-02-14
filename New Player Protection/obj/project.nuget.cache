@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ElT8OjlG1A1qUrOXxM+GpFwIbuYs+7B+//zK/BipucOZouPPrstA1UhCPyfwmyBKENeC1xeax9tIYdkEhVsMbw==",
+  "dgSpecHash": "iHcHAPQTzl645LNE8Nr+Eh3PDjYP2reNuXeqNkEbYrKpTEDLk3fGlLbk538kkpxv6K5xc7h7IkycRGcPi1ZKMw==",
   "success": true,
-  "projectFilePath": "C:\\code\\source\\repos\\NPP\\New Player Protection\\NewPlayerProtection.csproj",
+  "projectFilePath": "C:\\Users\\azria\\Documents\\GitHub\\New-Player-Protection\\New Player Protection\\NewPlayerProtection.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\azria\\.nuget\\packages\\fody\\6.6.4\\fody.6.6.4.nupkg.sha512",
     "C:\\Users\\azria\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",

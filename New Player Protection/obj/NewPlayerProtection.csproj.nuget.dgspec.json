@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\code\\source\\repos\\NPP\\New Player Protection\\NewPlayerProtection.csproj": {}
+    "C:\\Users\\azria\\Documents\\GitHub\\New-Player-Protection\\New Player Protection\\NewPlayerProtection.csproj": {}
   },
   "projects": {
-    "C:\\code\\source\\repos\\NPP\\New Player Protection\\NewPlayerProtection.csproj": {
+    "C:\\Users\\azria\\Documents\\GitHub\\New-Player-Protection\\New Player Protection\\NewPlayerProtection.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\code\\source\\repos\\NPP\\New Player Protection\\NewPlayerProtection.csproj",
+        "projectUniqueName": "C:\\Users\\azria\\Documents\\GitHub\\New-Player-Protection\\New Player Protection\\NewPlayerProtection.csproj",
         "projectName": "NewPlayerProtection",
-        "projectPath": "C:\\code\\source\\repos\\NPP\\New Player Protection\\NewPlayerProtection.csproj",
+        "projectPath": "C:\\Users\\azria\\Documents\\GitHub\\New-Player-Protection\\New Player Protection\\NewPlayerProtection.csproj",
         "packagesPath": "C:\\Users\\azria\\.nuget\\packages\\",
-        "outputPath": "C:\\code\\source\\repos\\NPP\\New Player Protection\\obj\\",
+        "outputPath": "C:\\Users\\azria\\Documents\\GitHub\\New-Player-Protection\\New Player Protection\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\azria\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -31,6 +31,7 @@ using Sandbox.Game.GameSystems;
 using SpaceEngineers.Game.ModAPI;
 using System.Windows.Documents;
 using VRageMath;
+using VRage;
 
 namespace NewPlayerProtection;
 public class Plugin : TorchPluginBase, IWpfPlugin
@@ -150,7 +151,7 @@ public class Plugin : TorchPluginBase, IWpfPlugin
                                         Log.Info(ownerTS);
                                         long.TryParse(ownerTS, out long ownerTSNumber);
                                         long mathedTS = ownerTSNumber + 604800;
-                                        if ((long)mathedTS >= (long)ownerTSNumber)
+                                        if ((long)mathedTS >= DateTime.UtcNow.ToUnixTimestamp())
                                         {
                                             Log.Info("Player too old Deleting safezone owned by: " + identity.DisplayName);
                                             SZBlock.CustomName = "Test";

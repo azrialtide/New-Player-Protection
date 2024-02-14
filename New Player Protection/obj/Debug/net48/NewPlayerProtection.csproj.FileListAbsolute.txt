@@ -10,3 +10,16 @@ C:\code\source\repos\NPP\New Player Protection\obj\Debug\net48\NewPlayerProtecti
 C:\code\source\repos\NPP\New Player Protection\obj\Debug\net48\NewPlayerProtection.csproj.Fody.RuntimeCopyLocal.cache
 C:\code\source\repos\NPP\New Player Protection\obj\Debug\net48\NewPlayerProtection.dll
 C:\code\source\repos\NPP\New Player Protection\obj\Debug\net48\NewPlayerProtection.pdb
+C:\Users\azria\Documents\GitHub\New-Player-Protection\New Player Protection\bin\Debug\net48\manifest.xml
+C:\Users\azria\Documents\GitHub\New-Player-Protection\New Player Protection\bin\Debug\net48\NewPlayerProtection.dll
+C:\Users\azria\Documents\GitHub\New-Player-Protection\New Player Protection\bin\Debug\net48\NewPlayerProtection.pdb
+C:\Users\azria\Documents\GitHub\New-Player-Protection\New Player Protection\obj\Debug\net48\NewPlayerProtection.csproj.AssemblyReference.cache
+C:\Users\azria\Documents\GitHub\New-Player-Protection\New Player Protection\obj\Debug\net48\NewPlayerProtection.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\azria\Documents\GitHub\New-Player-Protection\New Player Protection\obj\Debug\net48\NewPlayerProtection.AssemblyInfoInputs.cache
+C:\Users\azria\Documents\GitHub\New-Player-Protection\New Player Protection\obj\Debug\net48\NewPlayerProtection.AssemblyInfo.cs
+C:\Users\azria\Documents\GitHub\New-Player-Protection\New Player Protection\obj\Debug\net48\NewPlayerProtection.csproj.CoreCompileInputs.cache
+C:\Users\azria\Documents\GitHub\New-Player-Protection\New Player Protection\obj\Debug\net48\NewPlayerProtection.sourcelink.json
+C:\Users\azria\Documents\GitHub\New-Player-Protection\New Player Protection\obj\Debug\net48\NewPlayerProtection.csproj.Fody.CopyLocal.cache
+C:\Users\azria\Documents\GitHub\New-Player-Protection\New Player Protection\obj\Debug\net48\NewPlayerProtection.csproj.Fody.RuntimeCopyLocal.cache
+C:\Users\azria\Documents\GitHub\New-Player-Protection\New Player Protection\obj\Debug\net48\NewPlayerProtection.dll
+C:\Users\azria\Documents\GitHub\New-Player-Protection\New Player Protection\obj\Debug\net48\NewPlayerProtection.pdb
