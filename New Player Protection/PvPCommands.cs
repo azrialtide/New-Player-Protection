@@ -28,32 +28,40 @@ namespace NewPlayerProtection
         [Permission(MyPromoteLevel.None)]
         public void Time()
         {
-            System.DateTime dateTime = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
-            var tsData = new NewPlayerProtection.Plugin();
-            tsData.idTimeMap.TryGetValue(Context.Player.SteamUserId.ToString(),out var joinTime);
-            var currentTime = DateTime.UtcNow.ToUnixTimestamp();
-            long.TryParse(joinTime + 604800, out long timeTillEnd);
-            dateTime = dateTime.AddSeconds(timeTillEnd);
-            TimeSpan timeLeft = dateTime - DateTime.Now; // At time of posting, it is 18/12/2019
-            string printDate = dateTime.ToShortDateString() + " " + dateTime.ToShortTimeString();
-            Log.Info("This is a Test ");
-            if (timeLeft.Days > 0)
+            NewPlayerProtection.Plugin.idTimeMap.TryGetValue(Context.Player.SteamUserId.ToString(),out var joinTime);
+            Log.Info("Read Data: " + joinTime);
+            long.TryParse(joinTime, out long joinTimeNum);
+            long timeTillEnd = joinTimeNum + 604800;
+            Log.Info("Read Data: " + timeTillEnd);
+            DateTimeOffset dateTimeOffset = DateTimeOffset.FromUnixTimeSeconds(timeTillEnd);
+
+
+            Log.Info("NOW: "+DateTime.Now);
+            Log.Info("Future: " + dateTimeOffset);
+            var tleft = DateTime.UtcNow - dateTimeOffset;
+            Log.Info("TimeLeft: " + tleft);
+            TimeSpan timeLeft = dateTimeOffset - DateTime.UtcNow;
+
+            
+
+            
+            if (timeLeft.Days >= 1)
             {
-                Context.Respond("Your protection ends in" + $"{timeLeft.Days} days");
+                Context.Respond("Your protection ends in " + $"{timeLeft.Days} days");
             }
-            else if (timeLeft.Days < 0 & timeLeft.Hours >= 1)
+            else if (timeLeft.Days <= 0 & timeLeft.Hours >= 1)
             {
                 Context.Respond("Your protection Ends in" + $"{timeLeft.Hours} hours");
             }
             else if (timeLeft.Days <= 0 & timeLeft.Hours <= 0 & timeLeft.Minutes >= 1)
             {
-                Context.Respond("Your protection Ends in" + $"{timeLeft.Minutes} minutes");
+                Context.Respond("Your protection Ends in " + $"{timeLeft.Minutes} minutes");
             }
             else if (timeLeft.Days <= 0 & timeLeft.Hours <= 0 & timeLeft.Minutes <= 0 & timeLeft.Seconds >= 1)
             {
-                Context.Respond("Your protection Ends in" + $"{timeLeft.Minutes} minutes");
+                Context.Respond("Your protection Ends in " + $"{timeLeft.Minutes} minutes");
             }
-            else
+            else if (timeLeft.Seconds <= 0)
             {
                 Context.Respond("Your protection has already ended");
             }
@@ -80,8 +88,8 @@ namespace NewPlayerProtection
                 {
                     data.SetElementValue("Timestamp","0");
                     var tsData = new NewPlayerProtection.Plugin();
-                    tsData.idTimeMap.Remove(Context.Player.SteamUserId.ToString());
-                    tsData.idTimeMap.Add(Context.Player.SteamUserId.ToString(), "0");
+                    NewPlayerProtection.Plugin.idTimeMap.Remove(Context.Player.SteamUserId.ToString());
+                    NewPlayerProtection.Plugin.idTimeMap.Add(Context.Player.SteamUserId.ToString(), "0");
 
                 }
                 NPPTime.Save(NPPTimeFile);

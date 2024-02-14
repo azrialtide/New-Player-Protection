@@ -39,7 +39,7 @@ public class Plugin : TorchPluginBase, IWpfPlugin
     public static readonly Logger Log = LogManager.GetCurrentClassLogger();
     private Persistent<Config> _config = null!;
     private TorchSessionManager? _sessionManager;
-    public Dictionary<string, string> idTimeMap = new Dictionary<string, string>();
+    public static Dictionary<string, string> idTimeMap = new Dictionary<string, string>();
     public override void Init(ITorchBase torch)
     {
         base.Init(torch);
@@ -94,10 +94,6 @@ public class Plugin : TorchPluginBase, IWpfPlugin
 
             case TorchSessionState.Loaded:
                 mpMan.PlayerJoined += playerloggedin;
-                //mpMan.PlayerJoined += AccModule.CheckIp;
-
-                //mpMan.PlayerLeft += ResetMotdOnce;
-
                 break;
 
 
@@ -148,13 +144,11 @@ public class Plugin : TorchPluginBase, IWpfPlugin
                                         //Log.Info("SafeZone found");
                                         var ownerSteamID = MySession.Static.Players.TryGetSteamId(owner);
                                         idTimeMap.TryGetValue(ownerSteamID.ToString(), out string ownerTS);
-                                        Log.Info(ownerTS);
                                         long.TryParse(ownerTS, out long ownerTSNumber);
                                         long mathedTS = ownerTSNumber + 604800;
-                                        if ((long)mathedTS >= DateTime.UtcNow.ToUnixTimestamp())
+                                        if ((long)mathedTS <= DateTime.UtcNow.ToUnixTimestamp())
                                         {
                                             Log.Info("Player too old Deleting safezone owned by: " + identity.DisplayName);
-                                            SZBlock.CustomName = "Test";
                                             MySlimBlock SZSlim = (MySlimBlock)SZBlock.SlimBlock;
                                             //grid.RemoveBlock(SZSlim);
                                             SZBlock.CubeGrid.RemoveBlock(SZSlim);
