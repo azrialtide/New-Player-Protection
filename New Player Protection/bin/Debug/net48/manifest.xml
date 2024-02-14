@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<PluginManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Name>New Player Protection</Name>
+    <Guid>B984D99B-BFA5-44E2-A9AA-F1E5023B3025</Guid>
+    <Version>v1.0.0</Version>
+</PluginManifest>

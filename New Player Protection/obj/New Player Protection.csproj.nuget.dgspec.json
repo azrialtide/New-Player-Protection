@@ -1,0 +1,76 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\code\\source\\repos\\NPP\\New Player Protection\\New Player Protection.csproj": {}
+  },
+  "projects": {
+    "C:\\code\\source\\repos\\NPP\\New Player Protection\\New Player Protection.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\code\\source\\repos\\NPP\\New Player Protection\\New Player Protection.csproj",
+        "projectName": "New Player Protection",
+        "projectPath": "C:\\code\\source\\repos\\NPP\\New Player Protection\\New Player Protection.csproj",
+        "packagesPath": "C:\\Users\\azria\\.nuget\\packages\\",
+        "outputPath": "C:\\code\\source\\repos\\NPP\\New Player Protection\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\azria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.storage.yandexcloud.net/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "targetAlias": "net48",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreLockProperties": {
+          "restorePackagesWithLockFile": "true"
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "targetAlias": "net48",
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "PolySharp": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.13.1, )"
+            },
+            "PropertyChanged.Fody": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Torch.Server.ReferenceAssemblies": {
+              "include": "Compile",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.3.1.260-master, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+C:\code\source\repos\NPP\New Player Protection\obj\Debug\net48\NewPlayerProtection.csproj.AssemblyReference.cache
+C:\code\source\repos\NPP\New Player Protection\obj\Debug\net48\NewPlayerProtection.GeneratedMSBuildEditorConfig.editorconfig
+C:\code\source\repos\NPP\New Player Protection\obj\Debug\net48\NewPlayerProtection.AssemblyInfoInputs.cache
+C:\code\source\repos\NPP\New Player Protection\obj\Debug\net48\NewPlayerProtection.AssemblyInfo.cs
+C:\code\source\repos\NPP\New Player Protection\obj\Debug\net48\NewPlayerProtection.csproj.CoreCompileInputs.cache
+C:\code\source\repos\NPP\New Player Protection\bin\Debug\net48\manifest.xml
+C:\code\source\repos\NPP\New Player Protection\bin\Debug\net48\NewPlayerProtection.dll
+C:\code\source\repos\NPP\New Player Protection\bin\Debug\net48\NewPlayerProtection.pdb
+C:\code\source\repos\NPP\New Player Protection\obj\Debug\net48\NewPlayerProtection.csproj.Fody.CopyLocal.cache
+C:\code\source\repos\NPP\New Player Protection\obj\Debug\net48\NewPlayerProtection.csproj.Fody.RuntimeCopyLocal.cache
+C:\code\source\repos\NPP\New Player Protection\obj\Debug\net48\NewPlayerProtection.dll
+C:\code\source\repos\NPP\New Player Protection\obj\Debug\net48\NewPlayerProtection.pdb
