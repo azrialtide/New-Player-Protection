@@ -182,7 +182,6 @@ public class Plugin : TorchPluginBase, IWpfPlugin
             }
         }
     }
-
     private void playerloggedin(IPlayer player)
     {
         var PID = Sync.Players.TryGetPlayerIdentity(player.SteamId);

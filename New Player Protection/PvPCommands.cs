@@ -28,33 +28,31 @@ namespace NewPlayerProtection
         [Permission(MyPromoteLevel.None)]
         public void Time()
         {
-            NewPlayerProtection.Plugin.idTimeMap.TryGetValue(Context.Player.SteamUserId.ToString(),out var joinTime);
-            long.TryParse(joinTime, out long joinTimeNum);
-            long timeTillEnd = joinTimeNum + 604800;
-            DateTimeOffset dateTimeOffset = DateTimeOffset.FromUnixTimeSeconds(timeTillEnd);
-            var tleft = DateTime.UtcNow - dateTimeOffset;
-            TimeSpan timeLeft = dateTimeOffset - DateTime.UtcNow;
-
-            
-
-            
-            if (timeLeft.Days >= 1)
+            System.DateTime dateTime = new System.DateTime(1970, 1, 1, 0, 0, 0, 0);
+            var tsData = new NewPlayerProtection.Plugin();
+            tsData.idTimeMap.TryGetValue(Context.Player.SteamUserId.ToString(), out var joinTime);
+            var currentTime = DateTime.UtcNow.ToUnixTimestamp();
+            long.TryParse(joinTime + 604800, out long timeTillEnd);
+            dateTime = dateTime.AddSeconds(timeTillEnd);
+            TimeSpan timeLeft = dateTime - DateTime.Now;
+            string printDate = dateTime.ToShortDateString() + " " + dateTime.ToShortTimeString();
+            if (timeLeft.Days > 0)
             {
-                Context.Respond("Your protection ends in " + $"{timeLeft.Days} days");
+                Context.Respond("Your protection ends in" + $"{timeLeft.Days} days");
             }
-            else if (timeLeft.Days <= 0 & timeLeft.Hours >= 1)
+            else if (timeLeft.Days < 0 & timeLeft.Hours >= 1)
             {
                 Context.Respond("Your protection Ends in" + $"{timeLeft.Hours} hours");
             }
             else if (timeLeft.Days <= 0 & timeLeft.Hours <= 0 & timeLeft.Minutes >= 1)
             {
-                Context.Respond("Your protection Ends in " + $"{timeLeft.Minutes} minutes");
+                Context.Respond("Your protection Ends in" + $"{timeLeft.Minutes} minutes");
             }
             else if (timeLeft.Days <= 0 & timeLeft.Hours <= 0 & timeLeft.Minutes <= 0 & timeLeft.Seconds >= 1)
             {
-                Context.Respond("Your protection Ends in " + $"{timeLeft.Minutes} minutes");
+                Context.Respond("Your protection Ends in" + $"{timeLeft.Minutes} minutes");
             }
-            else if (timeLeft.Seconds <= 0)
+            else
             {
                 Context.Respond("Your protection has already ended");
             }
@@ -79,19 +77,21 @@ namespace NewPlayerProtection
                                                 select item;
                 foreach (var data in xmlData)
                 {
-                    data.SetElementValue("Timestamp","0");
+                    data.SetElementValue("Timestamp", "0");
                     var tsData = new NewPlayerProtection.Plugin();
-                    NewPlayerProtection.Plugin.idTimeMap.Remove(Context.Player.SteamUserId.ToString());
-                    NewPlayerProtection.Plugin.idTimeMap.Add(Context.Player.SteamUserId.ToString(), "0");
+                    tsData.idTimeMap.Remove(Context.Player.SteamUserId.ToString());
+                    tsData.idTimeMap.Add(Context.Player.SteamUserId.ToString(), "0");
 
                 }
                 NPPTime.Save(NPPTimeFile);
             }
-            else {
+            else
+            {
                 Context.Respond("To disable the use of your New Player protection SafeZone early please type !protection disable confirm.");
                 Context.Respond("WARNING: This is permanent and cannot be undone");
             }
         }
+        //Add command to give zonechip if they have valid time left
 
     }
 }
